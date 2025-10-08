@@ -1,0 +1,67 @@
+Section 13: Databases
+
+Overview:
+A database is a structured system for storing, managing, and retrieving data. Web applications use databases to keep user information, content, logs, configuration, and more.
+
+Types of databases:
+1. Relational Databases (RDBMS)
+   - Data is organized in tables with rows and columns.
+   - Uses Structured Query Language (SQL) for operations.
+   - Examples: MySQL, PostgreSQL, Microsoft SQL Server, MariaDB, Oracle.
+   - Good for complex queries, data consistency, and relationships.
+
+2. NoSQL Databases
+   - Data storage is flexible (documents, key-value pairs, graphs).
+   - Examples: MongoDB, Redis, CouchDB, Cassandra.
+   - Suited for scalability, unstructured data, rapid development.
+
+3. In-Memory Databases
+   - Data is stored in RAM for very fast access.
+   - Examples: Redis, Memcached.
+   - Often used for caching, session data, or real-time analytics.
+
+How databases integrate with web applications:
+- The application server connects to the database through a driver or connector.
+- CRUD operations (Create, Read, Update, Delete) are performed based on user actions.
+- Queries fetch information, insert new records, update existing data, or remove entries.
+
+Common database operations:
+- SELECT: Retrieve data from the database.
+- INSERT: Add new records.
+- UPDATE: Modify existing data.
+- DELETE: Remove records.
+
+Security measures:
+- Use least privilege for database accounts.
+- Always validate and sanitize input to prevent SQL Injection.
+- Encrypt sensitive data at rest and in transit.
+- Regularly update database software.
+- Backup data frequently and test restoration.
+- Restrict remote access and expose only necessary ports.
+
+Common vulnerabilities:
+- SQL Injection: Unsanitized input allows attackers to execute arbitrary SQL commands.
+- Data Exposure: Weak access control or encryption can leak sensitive data.
+- Privilege Escalation: Misconfigured permissions can allow users more access than intended.
+- Denial of Service: Heavy queries or lack of indexing can slow or crash the database.
+
+Hands-on task:
+1. Set up a simple MySQL or PostgreSQL server and create a database.
+2. Connect to the database using a client (CLI, GUI, or code).
+3. Perform basic CRUD operations with SQL queries.
+4. Implement prepared statements to prevent SQL Injection.
+5. Enable encryption for connections (SSL/TLS).
+6. Create and restore database backups.
+7. Test for SQL Injection using a vulnerable query (e.g., `SELECT * FROM users WHERE name = '$input'`).
+8. Add indexes for frequently queried columns.
+9. Explore access controls by creating users with limited permissions.
+
+Practical exercise:
+- Write a query that returns all users with a specific role.
+- Insert a new record and verify it appears in the database.
+- Update a user's password and confirm the change.
+- Delete a record and check that it is removed.
+- Simulate an SQL Injection attack and apply mitigation.
+
+Summary:
+Databases are essential for dynamic web applications. Understanding their types, integration, operations, vulnerabilities, and practical security is key for building and testing secure web solutions.
